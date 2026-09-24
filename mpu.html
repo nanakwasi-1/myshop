@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="potstyle.css">
+    
+    <title>NaksTech | IT Professional & Developer</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        header { background: #333; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: #fff; margin: 0 10px; text-decoration: none; }
+        section { padding: 2rem; }
+        .nav-links { display: flex; }
+        .mobile-menu { display: none; cursor: pointer; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; }
+            .mobile-menu { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">NAKs~Portfolio</div>
+    <div class="mobile-menu">☰</div>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Hi, I'm Nana Kwasi</h1>
+    <p>IT Specialist & Full-Stack Developer. I build scalable web applications and robust IT infrastructure.</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>With over 3 years of experience, I specialize in creating secure, efficient, and user-friendly systems.</p>
+</section>
+
+<section id="services">
+    <h2>My Services</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Cloud Solutions</li>
+        <li>Cybersecurity</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+    <p>Online Shop, School Management System, and more.</p>
+</section>
+
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <textarea placeholder="Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 NaksTech. All rights reserved.</p>
+</footer>
+
+<script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Mobile menu toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    mobileMenu.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Form submission
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message!');
+        contactForm.reset();
+    });
+</script>
+</body>
+</html>

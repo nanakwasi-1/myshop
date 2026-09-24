@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+.navbar { display: flex; justify-content: space-between; padding: 1rem 5%; background: #333; color: #fff; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.hero { height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f4f4f4; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+.service-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+.contact-form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+input, textarea { margin-bottom: 10px; padding: 10px; }
